@@ -80,6 +80,11 @@ const Form = styled.form`
   width: 300px;
   gap: 12px;
 
+  h2 {
+    margin: 0 auto;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
   input {
     padding: 12px;
     border-radius: 6px;

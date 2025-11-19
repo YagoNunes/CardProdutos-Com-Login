@@ -5,7 +5,7 @@ import { ThemeProvider } from 'styled-components';
 
 import App from './App';
 import './index.css';
-import { theme } from "./styles/theme";
+import { theme } from "./Styles/Theme";
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>

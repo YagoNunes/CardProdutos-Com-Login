@@ -3,39 +3,43 @@ import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
 
 const Container = styled.div`
+  height: 100vh;
   display: flex;
-  flex-direction: column;
-  max-width: 400px;
-  margin: 80px auto;
-  padding: 30px;
-  background: #111827;
-  border-radius: 10px;
-  gap: 15px;
+  justify-content: center;
+  align-items: center;
 `;
 
 const Form = styled.form`
-    display: flex;
-    flex-direction: column;
-    gap:12px
-`;
+  background: #111827;
+  padding: 30px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  gap: 12px;
 
-const Input = styled.input`
-  padding: 10px;
-  font-size: 16px;
-`;
+  h2 {
+    margin: 0 auto;
+    font-size: 1.5rem;
+    font-wigth: bold;
+  }
+  input{
+    padding: 10px;
+    font-size: 16px;
+  }
+  button{
+    padding: 12px;
+    background: #198754;
+    color: white;
+    border: none;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s;
 
-const Button = styled.button`
-  padding: 12px;
-  background: #198754;
-  color: white;
-  border: none;
-  font-size: 16px;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: 0.2s;
-
-  &:hover {
-    background: #157347;
+    &:hover {
+        background: #157347;
+    }
   }
 `;
 
@@ -70,24 +74,24 @@ export default function Cadastro() {
 
   return (
     <Container>
-      <h2>Cadastro</h2>
-
       <Form onSubmit={handleSubmit}>
-        <Input
+        <h2>Cadastro</h2>
+        
+        <input
           type="email"
           placeholder="Seu email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
 
-        <Input
+        <input
           type="password"
           placeholder="Sua senha"
           value={senha}
           onChange={(e) => setSenha(e.target.value)}
         />
 
-        <Button type="submit">Cadastrar</Button>
+        <button type="submit">Cadastrar</button>
       </Form>
 
       {msg && <p>{msg}</p>}
